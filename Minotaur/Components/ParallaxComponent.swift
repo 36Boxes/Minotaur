@@ -63,7 +63,7 @@ class ParallaxComponent: GKComponent {
         let diffX = ((camera?.position.x)! - (previousPosition?.x)!) / dX
         let diffY = ((camera?.position.y)! - (previousPosition?.y)!) / dY
         
-        node?.position = CGPoint(x:(node?.position.x)! + diffX, y:(node?.position.y)! + diffY)
+        node?.position = CGPoint(x:(node?.position.x)! + diffX, y:(node?.position.y)!)
         
         previousPosition = camera?.position
         
