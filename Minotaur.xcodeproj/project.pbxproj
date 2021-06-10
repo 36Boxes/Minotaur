@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA82DB70267213D200D9F543 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82DB6F267213D200D9F543 /* AppDelegate.swift */; };
+		CA82DB72267213D200D9F543 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA82DB71267213D200D9F543 /* GameScene.sks */; };
+		CA82DB74267213D200D9F543 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA82DB73267213D200D9F543 /* Actions.sks */; };
+		CA82DB76267213D200D9F543 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82DB75267213D200D9F543 /* GameScene.swift */; };
+		CA82DB78267213D200D9F543 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82DB77267213D200D9F543 /* GameViewController.swift */; };
+		CA82DB7B267213D200D9F543 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA82DB79267213D200D9F543 /* Main.storyboard */; };
+		CA82DB7D267213D300D9F543 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA82DB7C267213D300D9F543 /* Assets.xcassets */; };
+		CA82DB88267213D300D9F543 /* MinotaurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82DB87267213D300D9F543 /* MinotaurTests.swift */; };
+		CA82DB93267213D300D9F543 /* MinotaurUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82DB92267213D300D9F543 /* MinotaurUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA82DB84267213D300D9F543 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA82DB64267213D200D9F543 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA82DB6B267213D200D9F543;
+			remoteInfo = Minotaur;
+		};
+		CA82DB8F267213D300D9F543 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA82DB64267213D200D9F543 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA82DB6B267213D200D9F543;
+			remoteInfo = Minotaur;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CA82DB6C267213D200D9F543 /* Minotaur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minotaur.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA82DB6F267213D200D9F543 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CA82DB71267213D200D9F543 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		CA82DB73267213D200D9F543 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		CA82DB75267213D200D9F543 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		CA82DB77267213D200D9F543 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		CA82DB7A267213D200D9F543 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CA82DB7C267213D300D9F543 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA82DB7E267213D300D9F543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA82DB83267213D300D9F543 /* MinotaurTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinotaurTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA82DB87267213D300D9F543 /* MinotaurTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinotaurTests.swift; sourceTree = "<group>"; };
+		CA82DB89267213D300D9F543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA82DB8E267213D300D9F543 /* MinotaurUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinotaurUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA82DB92267213D300D9F543 /* MinotaurUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinotaurUITests.swift; sourceTree = "<group>"; };
+		CA82DB94267213D300D9F543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA82DB69267213D200D9F543 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA82DB80267213D300D9F543 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA82DB8B267213D300D9F543 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA82DB63267213D200D9F543 = {
+			isa = PBXGroup;
+			children = (
+				CA82DB6E267213D200D9F543 /* Minotaur */,
+				CA82DB86267213D300D9F543 /* MinotaurTests */,
+				CA82DB91267213D300D9F543 /* MinotaurUITests */,
+				CA82DB6D267213D200D9F543 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CA82DB6D267213D200D9F543 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA82DB6C267213D200D9F543 /* Minotaur.app */,
+				CA82DB83267213D300D9F543 /* MinotaurTests.xctest */,
+				CA82DB8E267213D300D9F543 /* MinotaurUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA82DB6E267213D200D9F543 /* Minotaur */ = {
+			isa = PBXGroup;
+			children = (
+				CA82DB6F267213D200D9F543 /* AppDelegate.swift */,
+				CA82DB71267213D200D9F543 /* GameScene.sks */,
+				CA82DB73267213D200D9F543 /* Actions.sks */,
+				CA82DB75267213D200D9F543 /* GameScene.swift */,
+				CA82DB77267213D200D9F543 /* GameViewController.swift */,
+				CA82DB79267213D200D9F543 /* Main.storyboard */,
+				CA82DB7C267213D300D9F543 /* Assets.xcassets */,
+				CA82DB7E267213D300D9F543 /* Info.plist */,
+			);
+			path = Minotaur;
+			sourceTree = "<group>";
+		};
+		CA82DB86267213D300D9F543 /* MinotaurTests */ = {
+			isa = PBXGroup;
+			children = (
+				CA82DB87267213D300D9F543 /* MinotaurTests.swift */,
+				CA82DB89267213D300D9F543 /* Info.plist */,
+			);
+			path = MinotaurTests;
+			sourceTree = "<group>";
+		};
+		CA82DB91267213D300D9F543 /* MinotaurUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CA82DB92267213D300D9F543 /* MinotaurUITests.swift */,
+				CA82DB94267213D300D9F543 /* Info.plist */,
+			);
+			path = MinotaurUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA82DB6B267213D200D9F543 /* Minotaur */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA82DB97267213D300D9F543 /* Build configuration list for PBXNativeTarget "Minotaur" */;
+			buildPhases = (
+				CA82DB68267213D200D9F543 /* Sources */,
+				CA82DB69267213D200D9F543 /* Frameworks */,
+				CA82DB6A267213D200D9F543 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Minotaur;
+			productName = Minotaur;
+			productReference = CA82DB6C267213D200D9F543 /* Minotaur.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CA82DB82267213D300D9F543 /* MinotaurTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA82DB9A267213D300D9F543 /* Build configuration list for PBXNativeTarget "MinotaurTests" */;
+			buildPhases = (
+				CA82DB7F267213D300D9F543 /* Sources */,
+				CA82DB80267213D300D9F543 /* Frameworks */,
+				CA82DB81267213D300D9F543 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA82DB85267213D300D9F543 /* PBXTargetDependency */,
+			);
+			name = MinotaurTests;
+			productName = MinotaurTests;
+			productReference = CA82DB83267213D300D9F543 /* MinotaurTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CA82DB8D267213D300D9F543 /* MinotaurUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA82DB9D267213D300D9F543 /* Build configuration list for PBXNativeTarget "MinotaurUITests" */;
+			buildPhases = (
+				CA82DB8A267213D300D9F543 /* Sources */,
+				CA82DB8B267213D300D9F543 /* Frameworks */,
+				CA82DB8C267213D300D9F543 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA82DB90267213D300D9F543 /* PBXTargetDependency */,
+			);
+			name = MinotaurUITests;
+			productName = MinotaurUITests;
+			productReference = CA82DB8E267213D300D9F543 /* MinotaurUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA82DB64267213D200D9F543 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					CA82DB6B267213D200D9F543 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					CA82DB82267213D300D9F543 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = CA82DB6B267213D200D9F543;
+					};
+					CA82DB8D267213D300D9F543 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = CA82DB6B267213D200D9F543;
+					};
+				};
+			};
+			buildConfigurationList = CA82DB67267213D200D9F543 /* Build configuration list for PBXProject "Minotaur" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA82DB63267213D200D9F543;
+			productRefGroup = CA82DB6D267213D200D9F543 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA82DB6B267213D200D9F543 /* Minotaur */,
+				CA82DB82267213D300D9F543 /* MinotaurTests */,
+				CA82DB8D267213D300D9F543 /* MinotaurUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA82DB6A267213D200D9F543 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA82DB7B267213D200D9F543 /* Main.storyboard in Resources */,
+				CA82DB72267213D200D9F543 /* GameScene.sks in Resources */,
+				CA82DB7D267213D300D9F543 /* Assets.xcassets in Resources */,
+				CA82DB74267213D200D9F543 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA82DB81267213D300D9F543 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA82DB8C267213D300D9F543 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA82DB68267213D200D9F543 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA82DB76267213D200D9F543 /* GameScene.swift in Sources */,
+				CA82DB78267213D200D9F543 /* GameViewController.swift in Sources */,
+				CA82DB70267213D200D9F543 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA82DB7F267213D300D9F543 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA82DB88267213D300D9F543 /* MinotaurTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA82DB8A267213D300D9F543 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA82DB93267213D300D9F543 /* MinotaurUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA82DB85267213D300D9F543 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA82DB6B267213D200D9F543 /* Minotaur */;
+			targetProxy = CA82DB84267213D300D9F543 /* PBXContainerItemProxy */;
+		};
+		CA82DB90267213D300D9F543 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA82DB6B267213D200D9F543 /* Minotaur */;
+			targetProxy = CA82DB8F267213D300D9F543 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CA82DB79267213D200D9F543 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA82DB7A267213D200D9F543 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA82DB95267213D300D9F543 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CA82DB96267213D300D9F543 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA82DB98267213D300D9F543 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8A392AU4DR;
+				INFOPLIST_FILE = Minotaur/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.joshmanik.Minotaur;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA82DB99267213D300D9F543 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8A392AU4DR;
+				INFOPLIST_FILE = Minotaur/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.joshmanik.Minotaur;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CA82DB9B267213D300D9F543 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8A392AU4DR;
+				INFOPLIST_FILE = MinotaurTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.joshmanik.MinotaurTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Minotaur.app/Minotaur";
+			};
+			name = Debug;
+		};
+		CA82DB9C267213D300D9F543 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8A392AU4DR;
+				INFOPLIST_FILE = MinotaurTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.joshmanik.MinotaurTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Minotaur.app/Minotaur";
+			};
+			name = Release;
+		};
+		CA82DB9E267213D300D9F543 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8A392AU4DR;
+				INFOPLIST_FILE = MinotaurUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.joshmanik.MinotaurUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Minotaur;
+			};
+			name = Debug;
+		};
+		CA82DB9F267213D300D9F543 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8A392AU4DR;
+				INFOPLIST_FILE = MinotaurUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.joshmanik.MinotaurUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Minotaur;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA82DB67267213D200D9F543 /* Build configuration list for PBXProject "Minotaur" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA82DB95267213D300D9F543 /* Debug */,
+				CA82DB96267213D300D9F543 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA82DB97267213D300D9F543 /* Build configuration list for PBXNativeTarget "Minotaur" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA82DB98267213D300D9F543 /* Debug */,
+				CA82DB99267213D300D9F543 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA82DB9A267213D300D9F543 /* Build configuration list for PBXNativeTarget "MinotaurTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA82DB9B267213D300D9F543 /* Debug */,
+				CA82DB9C267213D300D9F543 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA82DB9D267213D300D9F543 /* Build configuration list for PBXNativeTarget "MinotaurUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA82DB9E267213D300D9F543 /* Debug */,
+				CA82DB9F267213D300D9F543 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA82DB64267213D200D9F543 /* Project object */;
+}
