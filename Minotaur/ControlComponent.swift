@@ -33,10 +33,12 @@ class PlayerControlComponent : GKComponent, ControlInputDelegate {
         if characterControlNode != nil{
             switch (command!) {
             case ("left"):
+                characterControlNode?.facing = -1.0
                 characterControlNode?.left = true
             case"cancel left", "stop left":
                 characterControlNode?.left = false
             case "right":
+                characterControlNode?.facing = 1.0
                 characterControlNode?.right = true
             case "cancel right", "stop right":
                 characterControlNode?.right = false

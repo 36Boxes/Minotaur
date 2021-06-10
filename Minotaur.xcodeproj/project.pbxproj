@@ -22,6 +22,11 @@
 		CA82DBB62672349000D9F543 /* CharacterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82DBB52672349000D9F543 /* CharacterNode.swift */; };
 		CA82DBC02672353300D9F543 /* NormalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82DBBF2672353300D9F543 /* NormalState.swift */; };
 		CA82DBC82672422000D9F543 /* PhysicsDetections.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82DBC72672422000D9F543 /* PhysicsDetections.swift */; };
+		CA82DBCE2672501E00D9F543 /* PlayerActions.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA82DBCD2672501E00D9F543 /* PlayerActions.sks */; };
+		CA82DBD32672503700D9F543 /* PreviewScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA82DBD22672503700D9F543 /* PreviewScene.sks */; };
+		CA82DBD82672548000D9F543 /* AnimationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82DBD72672548000D9F543 /* AnimationComponent.swift */; };
+		CA82DBDD267262D900D9F543 /* FantasyForestTiles.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA82DBDC267262D900D9F543 /* FantasyForestTiles.sks */; };
+		CA82DBE226726C5300D9F543 /* SkeletonActions.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA82DBE126726C5300D9F543 /* SkeletonActions.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,11 @@
 		CA82DBB52672349000D9F543 /* CharacterNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterNode.swift; sourceTree = "<group>"; };
 		CA82DBBF2672353300D9F543 /* NormalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalState.swift; sourceTree = "<group>"; };
 		CA82DBC72672422000D9F543 /* PhysicsDetections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsDetections.swift; sourceTree = "<group>"; };
+		CA82DBCD2672501E00D9F543 /* PlayerActions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlayerActions.sks; sourceTree = "<group>"; };
+		CA82DBD22672503700D9F543 /* PreviewScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PreviewScene.sks; sourceTree = "<group>"; };
+		CA82DBD72672548000D9F543 /* AnimationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationComponent.swift; sourceTree = "<group>"; };
+		CA82DBDC267262D900D9F543 /* FantasyForestTiles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FantasyForestTiles.sks; sourceTree = "<group>"; };
+		CA82DBE126726C5300D9F543 /* SkeletonActions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SkeletonActions.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +123,7 @@
 		CA82DB6E267213D200D9F543 /* Minotaur */ = {
 			isa = PBXGroup;
 			children = (
+				CA82DBCC26724F7000D9F543 /* Actions */,
 				CA82DB6F267213D200D9F543 /* AppDelegate.swift */,
 				CA82DB71267213D200D9F543 /* GameScene.sks */,
 				CA82DB73267213D200D9F543 /* Actions.sks */,
@@ -127,6 +138,8 @@
 				CA82DBB52672349000D9F543 /* CharacterNode.swift */,
 				CA82DBBF2672353300D9F543 /* NormalState.swift */,
 				CA82DBC72672422000D9F543 /* PhysicsDetections.swift */,
+				CA82DBD72672548000D9F543 /* AnimationComponent.swift */,
+				CA82DBDC267262D900D9F543 /* FantasyForestTiles.sks */,
 			);
 			path = Minotaur;
 			sourceTree = "<group>";
@@ -147,6 +160,16 @@
 				CA82DB94267213D300D9F543 /* Info.plist */,
 			);
 			path = MinotaurUITests;
+			sourceTree = "<group>";
+		};
+		CA82DBCC26724F7000D9F543 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				CA82DBCD2672501E00D9F543 /* PlayerActions.sks */,
+				CA82DBD22672503700D9F543 /* PreviewScene.sks */,
+				CA82DBE126726C5300D9F543 /* SkeletonActions.sks */,
+			);
+			path = Actions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,9 +275,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA82DBE226726C5300D9F543 /* SkeletonActions.sks in Resources */,
 				CA82DB7B267213D200D9F543 /* Main.storyboard in Resources */,
+				CA82DBDD267262D900D9F543 /* FantasyForestTiles.sks in Resources */,
+				CA82DBD32672503700D9F543 /* PreviewScene.sks in Resources */,
 				CA82DB72267213D200D9F543 /* GameScene.sks in Resources */,
 				CA82DB7D267213D300D9F543 /* Assets.xcassets in Resources */,
+				CA82DBCE2672501E00D9F543 /* PlayerActions.sks in Resources */,
 				CA82DB74267213D200D9F543 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +313,7 @@
 				CA82DBA7267217E000D9F543 /* ControllerNodes.swift in Sources */,
 				CA82DB78267213D200D9F543 /* GameViewController.swift in Sources */,
 				CA82DB70267213D200D9F543 /* AppDelegate.swift in Sources */,
+				CA82DBD82672548000D9F543 /* AnimationComponent.swift in Sources */,
 				CA82DBC82672422000D9F543 /* PhysicsDetections.swift in Sources */,
 				CA82DBC02672353300D9F543 /* NormalState.swift in Sources */,
 				CA82DBAC267221AF00D9F543 /* ControlInputDelegate.swift in Sources */,
