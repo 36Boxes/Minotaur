@@ -20,12 +20,23 @@ class GameScene: SKScene {
     var physicsDelegate = PhysicsDetection()
     var player: CharacterNode?
     
+    var parallaxComponentSystem: GKComponentSystem<ParallaxComponent>?
+    
     private var lastUpdateTime : TimeInterval = 0
     
     override func didMove(to view: SKView) {
         
         self.physicsWorld.contactDelegate = physicsDelegate
         
+        parallaxComponentSystem = GKComponentSystem.init(componentClass: ParallaxComponent.self)
+        
+        for entity in self.entities{
+            parallaxComponentSystem?.addComponent(foundIn: entity)
+        }
+        
+        for component in (parallaxComponentSystem?.components)!{
+            component.prepareWith(camera: camera)
+        }
         if let thePlayer = childNode(withName: "player"){
             let entity = GKEntity()
             entity.addComponent(PlayerControlComponent())
@@ -69,6 +80,8 @@ class GameScene: SKScene {
         for entity in self.entities{
             entity.update(deltaTime: dt)
         }
+        
+        parallaxComponentSystem?.update(deltaTime: currentTime)
         
         self.lastUpdateTime = currentTime
     }

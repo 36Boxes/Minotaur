@@ -27,6 +27,8 @@
 		CA82DBD82672548000D9F543 /* AnimationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82DBD72672548000D9F543 /* AnimationComponent.swift */; };
 		CA82DBDD267262D900D9F543 /* FantasyForestTiles.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA82DBDC267262D900D9F543 /* FantasyForestTiles.sks */; };
 		CA82DBE226726C5300D9F543 /* SkeletonActions.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA82DBE126726C5300D9F543 /* SkeletonActions.sks */; };
+		CA82DBE726727CF900D9F543 /* CountrySet.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA82DBE626727CF900D9F543 /* CountrySet.sks */; };
+		CA82DBED26728D8000D9F543 /* ParallaxComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82DBEC26728D8000D9F543 /* ParallaxComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		CA82DBD72672548000D9F543 /* AnimationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationComponent.swift; sourceTree = "<group>"; };
 		CA82DBDC267262D900D9F543 /* FantasyForestTiles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FantasyForestTiles.sks; sourceTree = "<group>"; };
 		CA82DBE126726C5300D9F543 /* SkeletonActions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SkeletonActions.sks; sourceTree = "<group>"; };
+		CA82DBE626727CF900D9F543 /* CountrySet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CountrySet.sks; sourceTree = "<group>"; };
+		CA82DBEC26728D8000D9F543 /* ParallaxComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 		CA82DB6E267213D200D9F543 /* Minotaur */ = {
 			isa = PBXGroup;
 			children = (
+				CA82DBEB26728D4900D9F543 /* Components */,
 				CA82DBCC26724F7000D9F543 /* Actions */,
 				CA82DB6F267213D200D9F543 /* AppDelegate.swift */,
 				CA82DB71267213D200D9F543 /* GameScene.sks */,
@@ -133,13 +138,12 @@
 				CA82DB7C267213D300D9F543 /* Assets.xcassets */,
 				CA82DB7E267213D300D9F543 /* Info.plist */,
 				CA82DBA6267217E000D9F543 /* ControllerNodes.swift */,
-				CA82DBB02672292A00D9F543 /* ControlComponent.swift */,
 				CA82DBAB267221AF00D9F543 /* ControlInputDelegate.swift */,
 				CA82DBB52672349000D9F543 /* CharacterNode.swift */,
 				CA82DBBF2672353300D9F543 /* NormalState.swift */,
 				CA82DBC72672422000D9F543 /* PhysicsDetections.swift */,
-				CA82DBD72672548000D9F543 /* AnimationComponent.swift */,
 				CA82DBDC267262D900D9F543 /* FantasyForestTiles.sks */,
+				CA82DBE626727CF900D9F543 /* CountrySet.sks */,
 			);
 			path = Minotaur;
 			sourceTree = "<group>";
@@ -170,6 +174,16 @@
 				CA82DBE126726C5300D9F543 /* SkeletonActions.sks */,
 			);
 			path = Actions;
+			sourceTree = "<group>";
+		};
+		CA82DBEB26728D4900D9F543 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CA82DBD72672548000D9F543 /* AnimationComponent.swift */,
+				CA82DBB02672292A00D9F543 /* ControlComponent.swift */,
+				CA82DBEC26728D8000D9F543 /* ParallaxComponent.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA82DBE726727CF900D9F543 /* CountrySet.sks in Resources */,
 				CA82DBE226726C5300D9F543 /* SkeletonActions.sks in Resources */,
 				CA82DB7B267213D200D9F543 /* Main.storyboard in Resources */,
 				CA82DBDD267262D900D9F543 /* FantasyForestTiles.sks in Resources */,
@@ -308,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA82DB76267213D200D9F543 /* GameScene.swift in Sources */,
+				CA82DBED26728D8000D9F543 /* ParallaxComponent.swift in Sources */,
 				CA82DBB62672349000D9F543 /* CharacterNode.swift in Sources */,
 				CA82DBB12672292A00D9F543 /* ControlComponent.swift in Sources */,
 				CA82DBA7267217E000D9F543 /* ControllerNodes.swift in Sources */,
