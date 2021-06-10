@@ -16,6 +16,12 @@
 		CA82DB7D267213D300D9F543 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA82DB7C267213D300D9F543 /* Assets.xcassets */; };
 		CA82DB88267213D300D9F543 /* MinotaurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82DB87267213D300D9F543 /* MinotaurTests.swift */; };
 		CA82DB93267213D300D9F543 /* MinotaurUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82DB92267213D300D9F543 /* MinotaurUITests.swift */; };
+		CA82DBA7267217E000D9F543 /* ControllerNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82DBA6267217E000D9F543 /* ControllerNodes.swift */; };
+		CA82DBAC267221AF00D9F543 /* ControlInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82DBAB267221AF00D9F543 /* ControlInputDelegate.swift */; };
+		CA82DBB12672292A00D9F543 /* ControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82DBB02672292A00D9F543 /* ControlComponent.swift */; };
+		CA82DBB62672349000D9F543 /* CharacterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82DBB52672349000D9F543 /* CharacterNode.swift */; };
+		CA82DBC02672353300D9F543 /* NormalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82DBBF2672353300D9F543 /* NormalState.swift */; };
+		CA82DBC82672422000D9F543 /* PhysicsDetections.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82DBC72672422000D9F543 /* PhysicsDetections.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		CA82DB8E267213D300D9F543 /* MinotaurUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinotaurUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA82DB92267213D300D9F543 /* MinotaurUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinotaurUITests.swift; sourceTree = "<group>"; };
 		CA82DB94267213D300D9F543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA82DBA6267217E000D9F543 /* ControllerNodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerNodes.swift; sourceTree = "<group>"; };
+		CA82DBAB267221AF00D9F543 /* ControlInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlInputDelegate.swift; sourceTree = "<group>"; };
+		CA82DBB02672292A00D9F543 /* ControlComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlComponent.swift; sourceTree = "<group>"; };
+		CA82DBB52672349000D9F543 /* CharacterNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterNode.swift; sourceTree = "<group>"; };
+		CA82DBBF2672353300D9F543 /* NormalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalState.swift; sourceTree = "<group>"; };
+		CA82DBC72672422000D9F543 /* PhysicsDetections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsDetections.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +121,12 @@
 				CA82DB79267213D200D9F543 /* Main.storyboard */,
 				CA82DB7C267213D300D9F543 /* Assets.xcassets */,
 				CA82DB7E267213D300D9F543 /* Info.plist */,
+				CA82DBA6267217E000D9F543 /* ControllerNodes.swift */,
+				CA82DBB02672292A00D9F543 /* ControlComponent.swift */,
+				CA82DBAB267221AF00D9F543 /* ControlInputDelegate.swift */,
+				CA82DBB52672349000D9F543 /* CharacterNode.swift */,
+				CA82DBBF2672353300D9F543 /* NormalState.swift */,
+				CA82DBC72672422000D9F543 /* PhysicsDetections.swift */,
 			);
 			path = Minotaur;
 			sourceTree = "<group>";
@@ -263,8 +281,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA82DB76267213D200D9F543 /* GameScene.swift in Sources */,
+				CA82DBB62672349000D9F543 /* CharacterNode.swift in Sources */,
+				CA82DBB12672292A00D9F543 /* ControlComponent.swift in Sources */,
+				CA82DBA7267217E000D9F543 /* ControllerNodes.swift in Sources */,
 				CA82DB78267213D200D9F543 /* GameViewController.swift in Sources */,
 				CA82DB70267213D200D9F543 /* AppDelegate.swift in Sources */,
+				CA82DBC82672422000D9F543 /* PhysicsDetections.swift in Sources */,
+				CA82DBC02672353300D9F543 /* NormalState.swift in Sources */,
+				CA82DBAC267221AF00D9F543 /* ControlInputDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
