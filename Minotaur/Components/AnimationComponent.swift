@@ -16,6 +16,7 @@ class AnimationComponent : GKComponent {
     var walkAnimation: SKAction?
     var jumpAnimation: SKAction?
     var attackAnimation: SKAction?
+    var damageAnim : SKAction?
     
     override init(){
         super.init()
@@ -23,6 +24,7 @@ class AnimationComponent : GKComponent {
         walkAnimation = SKAction(named: "Run")
         jumpAnimation = SKAction(named: "Jump")
         attackAnimation = SKAction(named: "Attack1")
+        damageAnim = SKAction(named: "Damage")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -31,6 +33,7 @@ class AnimationComponent : GKComponent {
         walkAnimation = SKAction(named: "Run")
         jumpAnimation = SKAction(named: "Jump")
         attackAnimation = SKAction(named: "Attack1")
+        damageAnim = SKAction(named: "Damage")
     }
     
     override func update(deltaTime seconds: TimeInterval) {
@@ -68,6 +71,22 @@ class AnimationComponent : GKComponent {
                 }
             }
         }
+        
+        if cnode?.stateMachine?.currentState is AttackState {
+            if cnode?.action(forKey: "attack") == nil{
+                cnode?.removeAllActions()
+                cnode?.run(attackAnimation!, withKey: "attack")
+            }
+        }
+        
+        if cnode?.stateMachine?.currentState is DamageState {
+            if cnode?.action(forKey: "damage") == nil{
+                cnode?.removeAllActions()
+                cnode?.run(damageAnim!, withKey: "damage")
+            }
+        }
     }
+    
+    override class var supportsSecureCoding: Bool { true }
 
 }

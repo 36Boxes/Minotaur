@@ -16,9 +16,12 @@ class GameScene: SKScene {
     
     var background = SKSpriteNode(imageNamed: "SkyWithClouds")
     var entities = [GKEntity]()
+    var enemies = [CharacterNode]()
     var graphs = [String : GKGraph]()
     var physicsDelegate = PhysicsDetection()
     var player: CharacterNode?
+    var enemy : CharacterNode?
+    var opp : CharacterNode!
     
     var parallaxComponentSystem: GKComponentSystem<ParallaxComponent>?
     
@@ -48,11 +51,27 @@ class GameScene: SKScene {
             if player != nil {
                 player?.createPhysics()
                 player?.setupSates()
+                player?.setHurtbox(size: CGSize(width: 20, height: 40))
             }
+        
 
             if let plComponent = thePlayer.entity?.component(ofType: PlayerControlComponent.self){
                 plComponent.setupControls(camera: camera!, scene: self)
             }
+            
+        opp = CharacterNode(imageNamed: "MI1")
+        let entit = GKEntity()
+        entit.addComponent(EnemyControlComponent())
+        entit.addComponent(AnimationComponent())
+        entit.addComponent(GKSKNodeComponent(node: opp))
+            entities.append(entit)
+            opp.createPhysics()
+            opp.setupSates()
+            opp.name = "Enemy"
+            opp.zPosition = 5
+            opp.position = CGPoint(x: (camera?.position.x)! - 50, y: (camera?.position.y)!)
+            self.addChild(opp)
+            
         }
         
         if let tilemap = childNode(withName: "ForegroundMap") as? SKTileMapNode{
@@ -61,7 +80,7 @@ class GameScene: SKScene {
     }
     
     func centerOnNode(node: SKNode){
-        self.camera!.run(SKAction.move(to: CGPoint(x: node.position.x, y: node.position.y), duration: 0.5))
+        self.camera!.run(SKAction.move(to: CGPoint(x: node.position.x, y: node.position.y + 100), duration: 0.5))
     }
     
     override func didFinishUpdate() {
@@ -87,130 +106,7 @@ class GameScene: SKScene {
         self.lastUpdateTime = currentTime
     }
     
-    func createGrounds(){
-        
-        for i in 0...3 {
-            
-            let ground = SKSpriteNode(imageNamed: "GrassFloor")
-            ground.name = "Ground"
-            ground.size = CGSize(width: (self.scene?.size.width)!, height: 30)
-            
-            self.addChild(ground)
-            
-            let tree = SKSpriteNode(imageNamed: "TreeWithoutPath")
-            tree.name = "Tree"
-            tree.size = CGSize(width: (self.scene?.size.width)!, height: 250)
-            tree.anchorPoint = CGPoint(x:0.5, y:0.5)
-            tree.zPosition = 10
-            tree.position = CGPoint(x: CGFloat(i) * tree.size.width, y: frame.maxY/3 + 140)
-            self.addChild(tree)
-            
-            let sky = SKSpriteNode(imageNamed: "SkyWithClouds")
-            sky.name = "Sky"
-            sky.size = CGSize(width: (self.scene?.size.width)!, height: 250)
-            sky.anchorPoint = CGPoint(x:0.5, y:0.5)
-            sky.zPosition = 1
-            sky.position = CGPoint(x: CGFloat(i) * ground.size.width, y: frame.maxY/3 + 150)
-            
-            self.addChild(sky)
-            
-            let hill = SKSpriteNode(imageNamed: "BackgroundMountains")
-            hill.name = "Hills"
-            hill.size = CGSize(width: (self.scene?.size.width)!, height: 250)
-            hill.anchorPoint = CGPoint(x:0.5, y:0.5)
-            hill.zPosition = 2
-            hill.position = CGPoint(x: CGFloat(i) * ground.size.width, y: frame.maxY/3 + 150)
-            
-            self.addChild(hill)
-        }
-    }
-    
-    func moveGroundLeft(){
-        
-        self.enumerateChildNodes(withName: "Ground", using: ({
-            (node, error) in
-            
-            node.position.x += 1.5
-            
-            if node.position.x > ((self.scene?.size.width)!){
-                node.position.x -= (self.scene?.size.width)! * 3
-            }
-        }))
-        self.enumerateChildNodes(withName: "Tree", using: ({
-            (node, error) in
-            
-            node.position.x += 1.5
-            
-            if node.position.x > ((self.scene?.size.width)!){
-                node.position.x -= (self.scene?.size.width)! * 3
-            }
-        }))
-        self.enumerateChildNodes(withName: "Hills", using: ({
-            (node, error) in
-            
-            node.position.x += 0.5
-            
-            if node.position.x > ((self.scene?.size.width)!){
-                node.position.x -= (self.scene?.size.width)! * 3
-            }
-        }))
-    }
-    
-    func moveSky(){
-        self.enumerateChildNodes(withName: "Sky", using: ({
-            (node, error) in
-            
-            node.position.x -= 0.25
-            
-            if node.position.x < -((self.scene?.size.width)!){
-                node.position.x += (self.scene?.size.width)! * 3
-            }
-        }))
-    }
-    
-    func moveGroundRight(){
-        
-        self.enumerateChildNodes(withName: "Ground", using: ({
-            (node, error) in
-            
-            node.position.x -= 1.5
-            
-            if node.position.x < -((self.scene?.size.width)!){
-                node.position.x += (self.scene?.size.width)! * 3
-            }
-        }))
-        
-        self.enumerateChildNodes(withName: "Tree", using: ({
-            (node, error) in
-            
-            node.position.x -= 1.5
-            
-            if node.position.x < -((self.scene?.size.width)!){
-                node.position.x += (self.scene?.size.width)! * 3
-            }
-        }))
-        
-        
-        self.enumerateChildNodes(withName: "Hills", using: ({
-            (node, error) in
-            
-            node.position.x -= 0.5
-            
-            if node.position.x < -((self.scene?.size.width)!){
-                node.position.x += (self.scene?.size.width)! * 3
-            }
-        }))
-        
-        self.enumerateChildNodes(withName: "Enemy", using: ({
-            (node, error) in
-            
-            node.position.x -= 0.5
-            
-            if node.position.x < -((self.scene?.size.width)!){
-                node.position.x += (self.scene?.size.width)! * 3
-            }
-        }))
-    }
+
     
     func giveTileMapPhysicsBody(map: SKTileMapNode){
         

@@ -46,6 +46,10 @@ class PlayerControlComponent : GKComponent, ControlInputDelegate {
                 characterControlNode?.jump = true
             case "cancel a", "stop a":
                 characterControlNode?.jump = false
+            case "b":
+                characterControlNode?.attack1 = true
+            case "cancel b", "stop b":
+            characterControlNode?.attack1 = false
                 
             default:
                 print("command: \(String(command!))")
@@ -56,4 +60,6 @@ class PlayerControlComponent : GKComponent, ControlInputDelegate {
     override func update(deltaTime seconds: TimeInterval) {
         characterControlNode?.stateMachine?.update(deltaTime: seconds)
     }
+    
+    override class var supportsSecureCoding: Bool { true }
 }

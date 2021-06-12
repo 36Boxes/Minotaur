@@ -59,7 +59,20 @@ class NormalState: GKState{
             cNode.landed = false
         }
         
+        if cNode.attack1{
+            self.stateMachine?.enter(AttackState.self)
+        }
         
+        if cNode.hit{
+            cNode.hSpeed = cNode.hitBy!.xHit
+            cNode.hitStun = (cNode.hitBy?.hitStun)!
+            if let face = cNode.hitBy?.parent as? CharacterNode{
+                cNode.facing = face.facing * -1
+            }
+            cNode.xScale = (cNode.facing)
+            cNode.hit = false
+            cNode.stateMachine?.enter(DamageState.self)
+        }
         cNode.position.x = cNode.position.x + cNode.hSpeed
     }
     

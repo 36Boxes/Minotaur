@@ -17,6 +17,8 @@ class CharacterNode: SKSpriteNode{
     var landed = false
     var grounded = false
     
+    var attack1 = false
+    
     var maxjump:CGFloat = 30.0
     
     var airAccel: CGFloat = 0.1
@@ -30,11 +32,36 @@ class CharacterNode: SKSpriteNode{
     
     var walkSpeed: CGFloat = 2
     
+    var hurtbox: Hurtbox?
+    var hitbox: Hitbox?
+    
+    var hit = false
+    var hitStun: CGFloat = 0
+    var hitBy: Hitbox?
+    
     var stateMachine:GKStateMachine?
+    
+    func setHurtbox(size: CGSize){
+        hurtbox = Hurtbox(color: .green, size: size)
+        hurtbox?.position = CGPoint(x:(hurtbox?.xOffset)!, y:(hurtbox?.yOffset)!)
+        hurtbox?.alpha = (hurtbox?.image_alpha)!
+        hurtbox?.zPosition = 50
+        self.addChild(hurtbox!)
+    }
+    
+    func setHitbox(size: CGSize){
+        hitbox = Hitbox(color: .red, size: size)
+        hitbox?.position = CGPoint(x:(hitbox?.xOffset)!, y:(hitbox?.yOffset)!)
+        hitbox?.alpha = (hitbox?.image_alpha)!
+        hitbox?.zPosition = 50
+        self.addChild(hitbox!)
+    }
     
     func setupSates(){
         let normalState = NormalState(with: self)
-        stateMachine = GKStateMachine(states: [normalState])
+        let attackState = AttackState(with: self)
+        let damageState = DamageState(with: self)
+        stateMachine = GKStateMachine(states: [normalState, attackState, damageState])
         stateMachine!.enter(NormalState.self)
     }
     
