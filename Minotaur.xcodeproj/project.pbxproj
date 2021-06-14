@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA442F842677672E0081209E /* DeathState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA442F832677672E0081209E /* DeathState.swift */; };
 		CA82DB70267213D200D9F543 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82DB6F267213D200D9F543 /* AppDelegate.swift */; };
 		CA82DB72267213D200D9F543 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA82DB71267213D200D9F543 /* GameScene.sks */; };
 		CA82DB74267213D200D9F543 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA82DB73267213D200D9F543 /* Actions.sks */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA442F832677672E0081209E /* DeathState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathState.swift; sourceTree = "<group>"; };
 		CA82DB6C267213D200D9F543 /* Minotaur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minotaur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA82DB6F267213D200D9F543 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA82DB71267213D200D9F543 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				CA82DBBF2672353300D9F543 /* NormalState.swift */,
 				CAB306392674D2EB00F44774 /* AttackState.swift */,
 				CAB306412674DA1200F44774 /* DamageState.swift */,
+				CA442F832677672E0081209E /* DeathState.swift */,
 			);
 			path = StateMachine;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA442F842677672E0081209E /* DeathState.swift in Sources */,
 				CA82DB76267213D200D9F543 /* GameScene.swift in Sources */,
 				CA82DBED26728D8000D9F543 /* ParallaxComponent.swift in Sources */,
 				CA82DBB62672349000D9F543 /* CharacterNode.swift in Sources */,

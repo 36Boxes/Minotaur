@@ -17,7 +17,6 @@ class DamageState : GKState {
     
     override func update(deltaTime seconds: TimeInterval) {
         super.update(deltaTime: seconds)
-        print(cnode?.hurtbox?.life)
         cnode?.hSpeed = approach(start: cnode!.hSpeed, end: 0, shift: 0.1)
         cnode?.hitStun = cnode!.hitStun - 1
         
