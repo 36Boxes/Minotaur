@@ -17,6 +17,7 @@ class AnimationComponent : GKComponent {
     var jumpAnimation: SKAction?
     var attackAnimation: SKAction?
     var damageAnim : SKAction?
+    var deathAnim: SKAction?
     
 //    var actionNames : [String : String] = [
 //        "Idle": "Idle", "Run": "Run", "Jump" : "Jump",
@@ -26,19 +27,21 @@ class AnimationComponent : GKComponent {
     override init(){
         super.init()
         idleAnimation = SKAction(named: "Idle")
-        walkAnimation = SKAction(named: "SWalk")
+        walkAnimation = SKAction(named: "Run")
         jumpAnimation = SKAction(named: "Jump")
         attackAnimation = SKAction(named: "Attack1")
         damageAnim = SKAction(named: "Damage")
+        deathAnim = SKAction(named: "Death")
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         idleAnimation = SKAction(named: "Idle")
-        walkAnimation = SKAction(named: "SWalk")
+        walkAnimation = SKAction(named: "Run")
         jumpAnimation = SKAction(named: "Jump")
         attackAnimation = SKAction(named: "Attack1")
         damageAnim = SKAction(named: "Damage")
+        deathAnim = SKAction(named: "Death")
     }
     
     override func update(deltaTime seconds: TimeInterval) {
@@ -91,12 +94,12 @@ class AnimationComponent : GKComponent {
             }
         }
         
-//        if cnode?.stateMachine?.currentState is DeathState {
-//            if cnode?.action(forKey: "death") == nil{
-//                cnode?.removeAllActions()
-//                cnode?.run()
-//            }
-//        }
+        if cnode?.stateMachine?.currentState is DeathState {
+            if cnode?.action(forKey: "death") == nil{
+                cnode?.removeAllActions()
+                cnode?.run(deathAnim!, withKey: "death")
+            }
+        }
     }
     
     override class var supportsSecureCoding: Bool { true }

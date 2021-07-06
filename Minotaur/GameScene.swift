@@ -104,6 +104,24 @@ class GameScene: SKScene {
         parallaxComponentSystem?.update(deltaTime: currentTime)
         
         self.lastUpdateTime = currentTime
+        
+        if let _ = scene!.childNode(withName:"//*Enemy*"){
+            print("opps deya")
+        } else {
+            print("opps not deya")
+            opp = CharacterNode(imageNamed: "MI1")
+            let entit = GKEntity()
+            entit.addComponent(EnemyControlComponent())
+            entit.addComponent(AnimationComponent())
+            entit.addComponent(GKSKNodeComponent(node: opp))
+                entities.append(entit)
+                opp.createPhysics()
+                opp.setupSates()
+                opp.name = "Enemy"
+                opp.zPosition = 5
+                opp.position = CGPoint(x: (camera?.position.x)! - 500, y: (camera?.position.y)!)
+                self.addChild(opp)
+        }
     }
     
 

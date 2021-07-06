@@ -21,7 +21,8 @@ class DamageState : GKState {
         cnode?.hitStun = cnode!.hitStun - 1
         
         if cnode?.hurtbox?.life == 0.0{
-            print("DEAD")
+            // move to the death state here
+            self.stateMachine?.enter(DeathState.self)
         }
         
         if (cnode?.hitStun)! <= 0 {
@@ -33,7 +34,7 @@ class DamageState : GKState {
             self.stateMachine?.enter(NormalState.self)
         }
         
-        cnode?.position.x = (cnode?.position.x)! + (cnode?.hSpeed)!
+//        cnode?.position.x = (cnode?.position.x)! + (cnode?.hSpeed)!
         
         cnode?.hurtbox?.position = CGPoint(x: (cnode?.hurtbox?.xOffset)!, y: (cnode?.hurtbox?.yOffset)!)
         

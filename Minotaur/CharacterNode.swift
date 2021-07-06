@@ -61,7 +61,8 @@ class CharacterNode: SKSpriteNode{
         let normalState = NormalState(with: self)
         let attackState = AttackState(with: self)
         let damageState = DamageState(with: self)
-        stateMachine = GKStateMachine(states: [normalState, attackState, damageState])
+        let deathState = DeathState(with: self)
+        stateMachine = GKStateMachine(states: [normalState, attackState, damageState, deathState])
         stateMachine!.enter(NormalState.self)
     }
     
